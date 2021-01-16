@@ -12,10 +12,11 @@ data:
   applicationEnvironmentVariables:
     - GW_GPS: false
     - GW_RESET_PIN: 11
-    - TC_URI: wss://lns.eu.thethings.network:443
-    - MODEL: RAK2245 
+    - TC_URI: wss://lns.us.thethings.network:443
+    - MODEL: RAK2245
     - GW_ID: 0
     - GW_KEY: 0
+    - NC_PRODUCT_UID: com.your-company.your-name:your_product
   defaultDeviceType: "raspberrypi3"
   supportedDeviceTypes:
     - "raspberrypi3"
