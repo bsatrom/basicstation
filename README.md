@@ -1,6 +1,6 @@
 # LoRa Basics™ Station using balena.io with RAK2245 or RAK 2287 concentrators
 
-This project deploys a TTN LoRa gateway with Basics Station Packet Forward protocol with balena. It runs on a Raspberry Pi or balenaFin with a RAK2245 and RAK2287 concentrator with a Pi Hat. 
+This project deploys a TTN LoRa gateway with Basics Station Packet Forward protocol with balena. It runs on a Raspberry Pi or balenaFin with a RAK2245 and RAK2287 concentrator with a Pi Hat.
 
 
 ## Introduction
@@ -85,7 +85,7 @@ Copy the result and you are ready to register your gateway with this EUI.
 
 ### Configure your The Things Network gateway
 
-1. Sign up at [The Things Network console](https://console.thethingsnetwork.org/). 
+1. Sign up at [The Things Network console](https://console.thethingsnetwork.org/).
 2. Click Gateways button.
 3. Click the "Register gateway" link.
 4. Check “I’m using the legacy packet forwarder” checkbox.
@@ -108,7 +108,7 @@ Variable Name | Value | Description | Default
 **`GW_GPS`** | `STRING` | Enables GPS | true or false
 **`GW_ID`** | `STRING` | TTN Gateway EUI | (EUI)
 **`GW_KEY`** | `STRING` | Unique TTN Gateway Key | (Key pasted from TTN console)
-**`GW_RESET_PIN`** | `STRING` | Pin number that resets | 11 
+**`GW_RESET_PIN`** | `STRING` | Pin number that resets | 11
 **`TC_URI`** | `STRING` | basics station TC URI to get connected. If you are in the EU region use ```wss://lns.{eu-us-in-au}.thethings.network:443``` | ```wss://lns.eu.thethings.network:443```
 **`MODEL`** | `STRING` | ```RAK2245``` or ```RAK2287``` | ```RAK2245```
 

@@ -3,7 +3,7 @@ slug: "balena-basicstation"
 name: "TTN basicstation Gateway"
 type: "sw.application"
 assets:
-  - url: "https://github.com/balenalabs/basicstation"
+  - url: "https://github.com/bsatrom/basicstation"
     name: "repository"
   - url: "https://raw.githubusercontent.com/balenalabs/basicstation/master/logo.png"
     name: "logo"
