@@ -16,6 +16,8 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster
 
 RUN install_packages jq
 
+WORKDIR /usr/src/app
+
 RUN : \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -30,7 +32,8 @@ RUN : \
 
 RUN python3 -m pip install aiohttp websockets python-periphery note-python
 
-WORKDIR /usr/src/app
+COPY . .
+ENV UDEV=1
 
 COPY --from=builder /usr/src/app/ ./
 

@@ -16,7 +16,9 @@ TAG=$(curl -sX POST \
 -H "Authorization: Bearer $BALENA_API_KEY" \
 --data "{ \"device\": \"$ID\", \"tag_key\": \"$TAG_KEY\", \"value\": \"$TTN_EUI\" }" > /dev/null)
 
-
+#Configure Notecard
+echo "Using PRODUCT UID: $NC_PRODUCT_UID"
+python3 -u notecard-forwarder/configure.py
 
 if [ -z ${MODEL} ] ;
  then
