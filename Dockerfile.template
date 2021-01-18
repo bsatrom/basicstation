@@ -37,6 +37,7 @@ ENV UDEV=1
 
 COPY --from=builder /usr/src/app/ ./
 
+COPY notecard-forwarder ./
 COPY start* ./
 
 # Launch our binary on container startup.
