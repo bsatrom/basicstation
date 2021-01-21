@@ -29,7 +29,6 @@
 #include "s2conf.h"
 #include "uj.h"
 
-
 #define MHDR_FTYPE  0xE0
 #define MHDR_RFU    0x1C
 #define MHDR_MAJOR  0x03
