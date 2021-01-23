@@ -1,6 +1,5 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian:buster-build as builder
-# Install build tools and remove layer cache afterwards 
-
+# Install build tools and remove layer cache afterwards
 
 # Switch to working directory for our app
 WORKDIR /usr/src/app
@@ -18,18 +17,6 @@ RUN install_packages jq
 
 WORKDIR /usr/src/app
 
-RUN : \
-    && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        software-properties-common \
-    && add-apt-repository -y ppa:deadsnakes \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        git psmisc build-essential lcov curl netcat-openbsd \
-        python3 python3-pip python3-dev python-dev python3-setuptools python3-wheel \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && :
-
 RUN python3 -m pip install aiohttp websockets python-periphery note-python
 
 COPY . .
@@ -37,7 +24,6 @@ ENV UDEV=1
 
 COPY --from=builder /usr/src/app/ ./
 
-COPY notecard-forwarder ./
 COPY start* ./
 
 # Launch our binary on container startup.

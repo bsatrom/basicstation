@@ -3,14 +3,14 @@ station:
   NetID: null
   bcning: null
   config: {}
-  freq_range: [863000000, 870000000]
+  freq_range: [902000000, 928000000]
   hwspec: sx1301/1
   max_eirp: 16
   protocol: 1
   # base region name: EU863, US902
-  region: EU863
+  region: US902
   # points to region in regions.yaml which defines DRs and upchannels
-  regionid: 1000
+  regionid: 1001
   sx1301_conf:
   - chan_FSK: {enable: false}
     chan_Lora_std: {enable: false}
