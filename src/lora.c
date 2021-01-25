@@ -170,15 +170,15 @@ int s2e_parse_lora_frame (ujbuf_t* buf, const u1_t* frame , int len, dbuf_t* lbu
             max(0, len-4-portoff), &frame[portoff], mic, len);
 
     // Open Socket connection and send payload
-    if(ws_connect(&tc->ws, "notecard-server", 8765, NULL) ) {
-        dbuf_t payload = {
-            .buf = NULL,
-            .bufsize = max(0, len-4-portoff),
-            .pos = &frame[portoff] };
+    //if(ws_connect(&tc->ws, "notecard-server", 8765, NULL) ) {
+    //    dbuf_t payload = {
+    //        .buf = NULL,
+    //        .bufsize = max(0, len-4-portoff),
+    //        .pos = &frame[portoff] };
         // ws_sendBinary (&tc->ws, payload);
         // ws_close(&tc->ws, 0);
-    }
-    //xprintf(lbuf, "%4.2H", max(0, len-4-portoff), &frame[portoff]);
+    //}
+    xprintf(lbuf, "%4.2H", max(0, len-4-portoff), &frame[portoff]);
 
     return 1;
 }
